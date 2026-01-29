@@ -1,3 +1,6 @@
-nav {
+nav { 
+    display: flex;
+    justify-content: auto;
+    align-items: center;
     background-color: lightseagreen;
 }
