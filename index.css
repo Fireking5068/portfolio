@@ -1,6 +1,10 @@
 nav { 
     display: flex;
-    justify-content: auto;
-    align-items: center;
+    justify-content: center;
+    text-align: center;
     background-color: lightseagreen;
+}
+
+nav a {
+    padding: 20px;
 }
