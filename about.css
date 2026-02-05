@@ -29,6 +29,6 @@ img {
     display: flex;
     justify-content: auto;
     align-content: center;
-    min-width: 50%;
-    min-height: 50%;
+    min-width: 20%;
+    min-height: 20%;
 }
