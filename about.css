@@ -5,6 +5,14 @@ nav {
     background-color: lightseagreen;
 }
 
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 nav a {
     padding: 20px;
 }
@@ -29,6 +37,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
     min-width: 20%;
     min-height: 20%;
 }
