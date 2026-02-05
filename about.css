@@ -27,7 +27,7 @@ p {
 
 img {
     display: flex;
-    justify-content: auto;
+    justify-content: center;
     align-content: center;
     min-width: 20%;
     min-height: 20%;
