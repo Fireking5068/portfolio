@@ -35,3 +35,9 @@ img {
     min-width: 20%;
     min-height: 20%;
 }
+
+nav a:hover {
+    background-color: gray;
+    padding: 22px;
+    font-size: 110%;
+}

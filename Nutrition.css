@@ -109,3 +109,9 @@ nav {
 nav a {
     padding: 20px;
 }
+
+nav a:hover {
+    background-color: gray;
+    padding: 22px;
+    font-size: 110%;
+}

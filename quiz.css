@@ -162,3 +162,9 @@ address {
   white-space: nowrap;
   border: 0;
 }
+
+nav a:hover {
+    background-color: gray;
+    padding: 22px;
+    font-size: 110%;
+}
