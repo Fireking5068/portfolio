@@ -23,8 +23,12 @@ h1 {
 p {
     display: flex;
     font-size: 24px;
-    text-align: center;
-    color: seagreen;
+    justify-content: center;
+    align-items: center;
+    background-color: lightseagreen;
+    margin: 20px auto;
+    max-width: 60%;
+    border: 5px solid #a004a0
 }
 
 img {
