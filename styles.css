@@ -2,6 +2,18 @@
     --border-color: red; 
 }
 
+nav { 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: lightseagreen;
+}
+
+
+
+nav a {
+    padding: 20px;
+}
 
 body {
     background-color: black;
