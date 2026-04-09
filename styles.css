@@ -1,0 +1,125 @@
+:root {
+    --border-color: red; 
+}
+
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    position: relative;
+}
+
+
+#container {
+    border: 6px groove var(--border-color);
+    padding: 40px 80px;
+    border-radius: 25px;
+    box-shadow: 0 0 15px var(--border-color),
+                0 0 30px var(--border-color),
+                0 0 45px var(--border-color);
+    text-align: center;
+}
+
+p {
+    color: var(--border-color);
+    margin: 0;
+    font-weight: bold;
+}
+
+#clock-container,
+#date-container {
+    text-shadow: 0 0 10px currentColor,
+                 0 0 20px currentColor,
+                 0 0 30px currentColor;
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+
+#menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#hamburger {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+#theme-options {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#menu-toggle:checked + #hamburger + #theme-options {
+    display: flex;
+}
+
+#theme-options label {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    margin: 3px 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#theme-options label:hover {
+    background-color: white;
+    color: black;
+}
+
+
+input[type="radio"] {
+    display: none;
+}
+
+
+#theme-red:checked ~ #container {
+    --border-color: red;
+}
+
+#theme-red:checked ~ #container p {
+    color: red;
+}
+
+#theme-blue:checked ~ #container {
+    --border-color: cyan;
+}
+
+#theme-blue:checked ~ #container p {
+    color: cyan;
+}
+
+#theme-green:checked ~ #container {
+    --border-color: lime;
+}
+
+#theme-green:checked ~ #container p {
+    color: lime;
+}
+
+#theme-purple:checked ~ #container {
+    --border-color: magenta;
+}
+
+#theme-purple:checked ~ #container p {
+    color: magenta;
+}

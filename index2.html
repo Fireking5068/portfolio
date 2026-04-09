@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noah's Digital Clock</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    
+    <input type="radio" name="theme" id="theme-red" checked>
+    <input type="radio" name="theme" id="theme-blue">
+    <input type="radio" name="theme" id="theme-green">
+    <input type="radio" name="theme" id="theme-purple">
+
+    
+    <div id="menu">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" id="hamburger">&#9776;</label>
+        <div id="theme-options">
+            <label for="theme-red">Red Theme</label>
+            <label for="theme-blue">Blue Theme</label>
+            <label for="theme-green">Green Theme</label>
+            <label for="theme-purple">Purple Theme</label>
+        </div>
+    </div>
+
+    
+    <div id="container">
+        <div id="clock-container">
+            <p id="time">00:00:00 AM</p>
+        </div>
+        <div id="date-container">
+            <p id="date">mm/dd/yyyy</p>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
