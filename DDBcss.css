@@ -1,0 +1,128 @@
+:root {
+    --brown: #6B4E3D;
+    --tan: #C18F5A;
+    --cream: #F5EFE6;
+    --green: #7A8E6A;
+    --beige: #DDD2BE;
+    --gold: #D4A94A;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--cream);
+    color: var(--brown);
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--brown);
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav-links a {
+    color: var(--cream);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+
+.hero {
+    background-color: var(--tan);
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+}
+
+.order-btn {
+    background-color: var(--brown);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.order-btn:hover {
+    background-color: var(--gold);
+}
+
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--beige);
+    padding: 15px;
+    width: 180px;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card button {
+    background-color: var(--brown);
+    color: white;
+    border: none;
+    padding: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: var(--gold);
+}
+
+
+.pricing {
+    background-color: var(--tan);
+    color: white;
+}
+
+.pricing ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pricing li {
+    margin: 10px 0;
+}
+
+
+footer {
+    background-color: var(--brown);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
