@@ -11,15 +11,10 @@
 
 
 <nav>
-    <img src="Picture1.png" alt="Daily Dough Bakery Logo" class="logo">
+    <img src="Picture1.png" alt="Logo" class="logo">
+
     <div class="nav-links">
-        <a href="index.html">|Home|</a>
-        <a href="about.html">|About Me|</a>
-        <a href="Nutrition.html">|Nutrition Project|</a>
-        <a href="Colors.html">|Colors Project|</a>
-        <a href="Quiz.html">|Quiz Project|</a>
-        <a href="index2.html">|JS Clock|</a>
-        <a href="DDB.html">|Daily Dough Bakery|</a>
+        <a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
     </div>
 </nav>
 
@@ -37,25 +32,25 @@
         <div class="card">
             <img src="blueberry cheesecake inside.JPG" alt="Blueberry Cheesecake Bread">
             <h3>Blueberry Cheesecake</h3>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Blueberry Cheesecake', 10)">Add to Cart</button>
         </div>
 
         <div class="card">
             <img src="Chilicrisp.jpeg" alt="Chili Crisp Bread">
             <h3>Chili Crisp</h3>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Chili Crisp', 10)">Add to Cart</button>
         </div>
 
         <div class="card">
             <img src="cinnamon raison.JPG" alt="Cinnamon Raisin Bread">
             <h3>Cinnamon Raisin</h3>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Cinnamon Raisin', 15)">Add to Cart</button>
         </div>
 
         <div class="card">
             <img src="funfetti inside.JPG" alt="Funfetti Bread">
             <h3>Funfetti</h3>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Funfetti', 15)">Add to Cart</button>
         </div>
     </div>
 </section>
@@ -68,26 +63,34 @@
         <div class="card">
             <img src="Bagel.jpg" alt="Bagels">
             <h3>Bagels</h3>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Bagel', 10)">Add to Cart</button>
         </div>
 
         <div class="card">
             <img src="cookies.jpg" alt="Cookies">
             <h3>Cookies</h3>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Cookies', 10)">Add to Cart</button>
         </div>
 
         <div class="card">
             <img src="one inclusion.jpg" alt="One Inclusion Bread">
             <h3>One Inclusion</h3>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('One Inclusion', 10)">Add to Cart</button>
         </div>
 
         <div class="card">
             <img src="two inclusion.jpg" alt="Two Inclusion Bread">
             <h3>Two Inclusion</h3>
-            <button>Add to Cart</button>
+             <button onclick="addToCart('Two Inlucsion', 20)">Add to Cart</button>
         </div>
+        <div class="card">
+        <p><b>Custom Bread - $12</b></p>
+        <label><input type="checkbox" value="Chocolate"> Chocolate</label>
+        <label><input type="checkbox" value="Strawberry"> Strawberry</label>
+        <label><input type="checkbox" value="Vanilla"> Vanilla</label>
+        <br>
+        <button onclick="addCustomBread()">Add Custom Bread</button>
+</div>
     </div>
 </section>
 
@@ -102,10 +105,26 @@
     </ul>
 </section>
 
+<section class="hero">
+    <h2>Your Cart</h2>
+<div id="cart-items"></div>
+<h3 id="total">Total: $0</h3>
+<button onclick="clearCart()">Clear Cart</button>
+</section>
+
+<section class="additional">
+    <h2>Customer Reviews</h2>
+<p>⭐⭐⭐⭐⭐ "Best bread I've ever had!"</p>
+<p>⭐⭐⭐⭐ "Super fresh and tasty."</p>
+<p>⭐⭐⭐⭐⭐ "Loved the custom bread!"</p>
+</section>
+
 
 <footer>
     <p>© 2026 Daily Dough Bakery</p>
+    <p>Contact: Jennifer.ponce@laramie1.org</p>
 </footer>
 
+<script src="script1.js"></script>
 </body>
 </html>

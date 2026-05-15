@@ -1,5 +1,5 @@
 :root {
-    --brown: #6B4E3D;
+    --brown: #6b4e3d;
     --tan: #C18F5A;
     --cream: #F5EFE6;
     --green: #7A8E6A;
@@ -25,7 +25,8 @@ nav {
 }
 
 .logo {
-    height: 50px;
+    height: 100px;
+    width: 100px
 }
 
 .nav-links a {
@@ -126,3 +127,4 @@ footer {
     text-align: center;
     padding: 15px;
 }
+
