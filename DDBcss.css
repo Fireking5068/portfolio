@@ -7,6 +7,9 @@
     --gold: #D4A94A;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
@@ -14,7 +17,6 @@ body {
     background-color: var(--cream);
     color: var(--brown);
 }
-
 
 nav {
     display: flex;
@@ -26,7 +28,8 @@ nav {
 
 .logo {
     height: 100px;
-    width: 100px
+    width: 100px;
+    object-fit: contain;
 }
 
 .nav-links a {
@@ -40,28 +43,29 @@ nav {
     color: var(--gold);
 }
 
-
 .hero {
     background-color: var(--tan);
     text-align: center;
-    padding: 100px 20px;
+    padding: 80px 20px;
     color: white;
 }
 
-.order-btn {
+.order-btn,
+button {
     background-color: var(--brown);
     color: white;
     border: none;
-    padding: 15px 25px;
-    margin-top: 20px;
+    padding: 10px 14px;
+    margin-top: 10px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-weight: bold;
 }
 
-.order-btn:hover {
+.order-btn:hover,
+button:hover {
     background-color: var(--gold);
 }
-
 
 section {
     padding: 40px 20px;
@@ -72,39 +76,54 @@ h2 {
     margin-bottom: 20px;
 }
 
-
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 22px;
 }
 
 .card {
     background-color: var(--beige);
     padding: 15px;
-    width: 180px;
-    border-radius: 10px;
+    width: 190px;
+    border-radius: 12px;
+    text-align: center;
 }
 
 .card img {
     width: 100%;
+    height: 140px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
-.card button {
-    background-color: var(--brown);
-    color: white;
-    border: none;
-    padding: 8px;
-    margin-top: 10px;
-    cursor: pointer;
+.card h3 {
+    min-height: 45px;
 }
 
-.card button:hover {
-    background-color: var(--gold);
+.custom-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
+.custom-bread {
+    width: 260px;
+}
+
+.custom-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: fit-content;
+    margin: 10px auto;
+    text-align: left;
+}
+
+.small-note {
+    font-size: 14px;
+}
 
 .pricing {
     background-color: var(--tan);
@@ -120,6 +139,63 @@ h2 {
     margin: 10px 0;
 }
 
+#cart-panel {
+    position: fixed;
+    right: -340px;
+    top: 0;
+    width: 320px;
+    height: 100%;
+    background: white;
+    padding: 20px;
+    transition: right 0.3s;
+    overflow-y: auto;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+#cart-panel.open {
+    right: 0;
+}
+
+.close-cart {
+    float: right;
+    margin-top: 0;
+}
+
+#cart-items p {
+    background-color: var(--cream);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 9px;
+    margin: 7px 0;
+    box-sizing: border-box;
+    border: 1px solid var(--beige);
+    border-radius: 6px;
+}
+
+.reviews-section {
+    background-color: var(--tan);
+    color: white;
+}
+
+.review-form {
+    max-width: 400px;
+    margin: auto;
+}
+
+#reviews p {
+    background-color: var(--cream);
+    color: var(--brown);
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 10px auto;
+}
 
 footer {
     background-color: var(--brown);
@@ -128,3 +204,121 @@ footer {
     padding: 15px;
 }
 
+@media (max-width: 600px) {
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .card {
+        width: 85%;
+    }
+
+    #cart-panel {
+        width: 90%;
+        right: -90%;
+    }
+}
+
+.additional {
+    background-color: var(--cream);
+}
+
+.custom-section {
+    background-color: var(--cream);
+}
+
+.custom-card {
+    background: linear-gradient(var(--beige), var(--cream));
+    border: 2px solid var(--tan);
+    padding: 25px;
+    width: 300px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.custom-card h3 {
+    margin-top: 0;
+    color: var(--brown);
+}
+
+.custom-price {
+    font-weight: bold;
+    color: var(--brown);
+}
+
+.custom-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    width: fit-content;
+    margin: 15px auto;
+    background-color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+}
+
+.custom-options label {
+    cursor: pointer;
+}
+
+.custom-card button {
+    width: 100%;
+    padding: 12px;
+}
+
+.reviewsh2 {
+    color: black;
+}
+
+.about-me {
+    background-color: var(--cream);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.about-img {
+    width: 220px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background-color: white;
+    padding: 10px;
+}
+
+.about-text {
+    max-width: 500px;
+    text-align: left;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-text p {
+    line-height: 1.6;
+}
+
+.fun-facts {
+    margin-top: 20px;
+    background-color: var(--beige);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.fun-facts ul {
+    padding-left: 20px;
+}
+
+.fun-facts li {
+    margin: 8px 0;
+}

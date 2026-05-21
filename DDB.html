@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Dough Bakery</title>
-    <link rel="stylesheet" href="DDBcss.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Dough Bakery</title>
+<link rel="stylesheet" href="DDBcss.css">
 </head>
 
 <body>
 
-
 <nav>
-    <img src="Picture1.png" alt="Logo" class="logo">
+    <img src="Picture1.png" alt="Daily Dough Bakery Logo" class="logo">
 
     <div class="nav-links">
-        <a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
+        <a href="#" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</a>
     </div>
 </nav>
 
-
 <header class="hero">
     <h1>Fresh. Rustic. Homemade.</h1>
-    <button class="order-btn">ORDER NOW</button>
+    <button class="order-btn" onclick="scrollToMenu()">ORDER NOW</button>
 </header>
 
-
-<section class="featured">
+<section id="menu">
     <h2>Featured Bread</h2>
 
     <div class="card-container">
         <div class="card">
             <img src="blueberry cheesecake inside.JPG" alt="Blueberry Cheesecake Bread">
             <h3>Blueberry Cheesecake</h3>
+            <p>$10</p>
             <button onclick="addToCart('Blueberry Cheesecake', 10)">Add to Cart</button>
         </div>
 
         <div class="card">
             <img src="Chilicrisp.jpeg" alt="Chili Crisp Bread">
             <h3>Chili Crisp</h3>
+            <p>$10</p>
             <button onclick="addToCart('Chili Crisp', 10)">Add to Cart</button>
         </div>
 
         <div class="card">
             <img src="cinnamon raison.JPG" alt="Cinnamon Raisin Bread">
             <h3>Cinnamon Raisin</h3>
+            <p>$15</p>
             <button onclick="addToCart('Cinnamon Raisin', 15)">Add to Cart</button>
         </div>
 
         <div class="card">
             <img src="funfetti inside.JPG" alt="Funfetti Bread">
             <h3>Funfetti</h3>
+            <p>$15</p>
             <button onclick="addToCart('Funfetti', 15)">Add to Cart</button>
         </div>
     </div>
 </section>
-
 
 <section class="additional">
     <h2>Additional Breads</h2>
@@ -63,37 +63,52 @@
         <div class="card">
             <img src="Bagel.jpg" alt="Bagels">
             <h3>Bagels</h3>
-            <button onclick="addToCart('Bagel', 10)">Add to Cart</button>
+            <p>$10</p>
+            <button onclick="addToCart('Bagels', 10)">Add to Cart</button>
         </div>
 
         <div class="card">
             <img src="cookies.jpg" alt="Cookies">
             <h3>Cookies</h3>
+            <p>$10</p>
             <button onclick="addToCart('Cookies', 10)">Add to Cart</button>
         </div>
 
         <div class="card">
             <img src="one inclusion.jpg" alt="One Inclusion Bread">
             <h3>One Inclusion</h3>
-            <button onclick="addToCart('One Inclusion', 10)">Add to Cart</button>
+            <p>$10</p>
+            <button onclick="addToCart('One Inclusion Bread', 10)">Add to Cart</button>
         </div>
 
         <div class="card">
             <img src="two inclusion.jpg" alt="Two Inclusion Bread">
             <h3>Two Inclusion</h3>
-             <button onclick="addToCart('Two Inlucsion', 20)">Add to Cart</button>
+            <p>$15</p>
+            <button onclick="addToCart('Two Inclusion Bread', 15)">Add to Cart</button>
         </div>
-        <div class="card">
-        <p><b>Custom Bread - $12</b></p>
-        <label><input type="checkbox" value="Chocolate"> Chocolate</label>
-        <label><input type="checkbox" value="Strawberry"> Strawberry</label>
-        <label><input type="checkbox" value="Vanilla"> Vanilla</label>
-        <br>
-        <button onclick="addCustomBread()">Add Custom Bread</button>
-</div>
     </div>
 </section>
 
+<section class="custom-section">
+    <h2>Custom Bread</h2>
+
+    <div class="custom-wrapper">
+        <div class="custom-card">
+            <h3>Build Your Own Loaf</h3>
+            <p class="custom-price">Base Price: $15</p>
+            <p class="small-note">Choose your add-ins below. Each add-in is +$2.</p>
+
+            <div class="custom-options">
+                <label><input type="checkbox" value="Chilicrisp"> Chilicrisp</label>
+                <label><input type="checkbox" value="Funfetti"> Funfetti</label>
+                <label><input type="checkbox" value="Blueberry Cheesecake"> Blueberry Cheesecake</label>
+            </div>
+
+            <button onclick="addCustomBread()">Add Custom Bread</button>
+        </div>
+    </div>
+</section>
 
 <section class="pricing">
     <h2>Basic Pricing</h2>
@@ -105,20 +120,75 @@
     </ul>
 </section>
 
-<section class="hero">
+<div id="cart-panel">
+    <button class="close-cart" onclick="toggleCart()">✖</button>
+
     <h2>Your Cart</h2>
-<div id="cart-items"></div>
-<h3 id="total">Total: $0</h3>
-<button onclick="clearCart()">Clear Cart</button>
+    <div id="cart-items"></div>
+    <h3 id="total">Total: $0</h3>
+
+    <button onclick="clearCart()">Clear Cart</button>
+
+    <h3>Checkout</h3>
+    <input id="name" placeholder="Name">
+    <input id="address" placeholder="Address">
+    <button onclick="checkout()">Place Order</button>
+</div>
+
+<section class="reviews-section">
+    <h2 class="reviewsh2">Customer Reviews</h2>
+
+    <div id="reviews"></div>
+
+    <div class="review-form">
+        <select id="rating">
+            <option value="5">⭐⭐⭐⭐⭐ - 5 Stars</option>
+            <option value="4">⭐⭐⭐⭐ - 4 Stars</option>
+            <option value="3">⭐⭐⭐ - 3 Stars</option>
+            <option value="2">⭐⭐ - 2 Stars</option>
+            <option value="1">⭐ - 1 Star</option>
+        </select>
+
+        <input id="review-input" placeholder="Write your review...">
+        <button onclick="addReview()">Submit Review</button>
+    </div>
 </section>
 
-<section class="additional">
-    <h2>Customer Reviews</h2>
-<p>⭐⭐⭐⭐⭐ "Best bread I've ever had!"</p>
-<p>⭐⭐⭐⭐ "Super fresh and tasty."</p>
-<p>⭐⭐⭐⭐⭐ "Loved the custom bread!"</p>
-</section>
+<section class="about-me">
+    <h2>About the Baker</h2>
 
+    <div class="about-container">
+
+        <img src="Picture1.png" alt="Daily Dough Bakery Logo" class="about-img">
+
+        <div class="about-text">
+            <p>
+                Hi! My name is Ms. Ponce, and I started Daily Dough Bakery
+                because of my love for homemade bread and creative baking.
+                Every loaf is made with care using fresh ingredients and
+                unique flavors that bring comfort and happiness to others.
+            </p>
+
+            <p>
+                My goal is to create bread that feels homemade, warm, and
+                memorable while making online ordering simple and easy for
+                everyone. Thank you for supporting my bakery and being part
+                of this journey!
+            </p>
+
+            <div class="fun-facts">
+                <h3>Fun Facts</h3>
+                <ul>
+                    <li>🍞 Homemade artisan bread</li>
+                    <li>⭐ Custom flavor combinations</li>
+                    <li>🚚 Delivery available</li>
+                    <li>💛 Baked fresh every order</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 <footer>
     <p>© 2026 Daily Dough Bakery</p>
